@@ -6,6 +6,8 @@ use LicenseChecker\LicenseChecker;
 
 require __DIR__ . '/vendor/autoload.php';
 
+define('ROOT_DIR', __DIR__);
+
 $checker = new LicenseChecker($argv);
 try {
     $checker->analyze();
@@ -13,5 +15,6 @@ try {
     Output::exception($exception);
 }
 
-print_r($checker->getCollectedLicenses());
+foreach ($checker->getCollectedLicenses() as $license)
+var_dump($checker->getCollectedLicenses());
 print_r($checker->getCollectedProblems());

@@ -5,6 +5,7 @@ namespace LicenseChecker;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
+use LicenseChecker\Builder\LicenseModelBuilder;
 use LicenseChecker\Enum\License;
 use LicenseChecker\Exception\ConnectionException;
 use LicenseChecker\Exception\FileNotFoundException;
@@ -12,7 +13,7 @@ use LicenseChecker\Exception\WrongFileTypeException;
 use LicenseChecker\Helper\Arguments;
 use LicenseChecker\Helper\FileReader;
 use LicenseChecker\Helper\JSON;
-use Psr\Http\Message\StreamInterface;
+use LicenseChecker\Model\LicenseModel;
 
 /**
  * @package LicenseChecker
@@ -48,7 +49,7 @@ class LicenseChecker
     /** @var string[] */
     private $collectedProblems = [];
 
-    /** @var string[][] */
+    /** @var LicenseModel[] */
     private $collectedLicenses = [];
 
     /**
@@ -65,7 +66,7 @@ class LicenseChecker
      * @throws WrongFileTypeException
      * @throws FileNotFoundException
      */
-    public function analyze()
+    public function analyze(): void
     {
         $arrayOfComposer = JSON::decode($this->fileReader->fetchFileContent());
         $libraries = array_merge(
@@ -95,7 +96,10 @@ class LicenseChecker
                     if ($mappedName === null) {
                         $this->collectedProblems[$libName] = sprintf(self::MESSAGE_UNKNOWN_LICENSE, $license);
                     } else {
-                        $this->collectedLicenses[$libName][] = $mappedName;
+                        $this->collectedLicenses[] = LicenseModelBuilder::buildFromArray([
+                            'externalName' => $license,
+                            'internalName' => self::LICENSE_MAPPING[$license]
+                        ]);
                     }
                 }
             } else {
@@ -115,20 +119,8 @@ class LicenseChecker
         return $this->collectedProblems;
     }
 
-
     /**
-     * @param  StreamInterface $body
-     * @param  string          $libName
-     * @param  string          $versionName
-     * @throws ConnectionException
-     * @throws WrongFileTypeException
-     */
-    private function interpretBody(StreamInterface $body, string $libName, string $versionName): void
-    {
-    }
-
-    /**
-     * @return string[][]
+     * @return LicenseModel[]
      */
     public function getCollectedLicenses(): array
     {
