@@ -6,9 +6,9 @@ namespace LicenseChecker\Helper;
 use LicenseChecker\Exception\WrongFileTypeException;
 
 /**
- * @package  licenseChecker\Helper
- * @author   david.pauli
- * @since    20.06.2018
+ * @package LicenseChecker\Helper
+ * @author  david.pauli
+ * @since   20.06.2018
  */
 class JSON
 {

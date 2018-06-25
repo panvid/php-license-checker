@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace LicenseChecker\Model;
 
+use LicenseChecker\Builder\PermissionModelBuilder;
+use LicenseChecker\Constants;
 use LicenseChecker\Enum\Conditions;
 
 /**
@@ -20,26 +22,29 @@ class LicenseModel
     /** @var string The description. */
     private $licenseDescription;
 
-    /** @var string[] Conditions key & description */
-    private $commercialUse = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $commercialUse;
 
-    /** @var string[] Conditions key & description */
-    private $modification = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $modification;
 
-    /** @var string[] Conditions key & description */
-    private $distribution = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $distribution;
 
-    /** @var string[] Conditions key & description */
-    private $privateUse = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $patentUse;
 
-    /** @var string[] Conditions key & description */
-    private $liability = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $privateUse;
 
-    /** @var string[] Conditions key & description */
-    private $warranty = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $liability;
 
-    /** @var string[] Conditions key & description */
-    private $conditions = [Conditions::UNDEFINED => ''];
+    /** @var PermissionModel */
+    private $warranty;
+
+    /** @var string[] */
+    private $conditions = [];
 
     /**
      * @return string|null
@@ -96,9 +101,9 @@ class LicenseModel
     }
 
     /**
-     * @return string[]
+     * @return PermissionModel|null
      */
-    public function getCommercialUse(): array
+    public function getCommercialUse(): ?PermissionModel
     {
         return $this->commercialUse;
     }
@@ -109,14 +114,19 @@ class LicenseModel
      */
     public function setCommercialUse(array $commercialUse): self
     {
-        $this->commercialUse = $commercialUse;
+        $this->commercialUse = PermissionModelBuilder::buildFromArray([
+            'condition'   => $commercialUse['condition'] ?? Conditions::UNDEFINED,
+            'description' => $commercialUse['description']
+                ?? Constants::MAP_COMMERCIAL_USE_DESCRIPTION[$commercialUse['condition'] ?? '']
+                ?? ''
+        ]);
         return $this;
     }
 
     /**
-     * @return string[]
+     * @return PermissionModel|null
      */
-    public function getModification(): array
+    public function getModification(): ?PermissionModel
     {
         return $this->modification;
     }
@@ -127,14 +137,19 @@ class LicenseModel
      */
     public function setModification(array $modification): self
     {
-        $this->modification = $modification;
+        $this->modification = PermissionModelBuilder::buildFromArray([
+            'condition'   => $modification['condition'] ?? Conditions::UNDEFINED,
+            'description' => $modification['description']
+                ?? Constants::MAP_MODIFICATION_DESCRIPTION[$modification['condition'] ?? '']
+                ?? ''
+        ]);
         return $this;
     }
 
     /**
-     * @return string[]
+     * @return PermissionModel|null
      */
-    public function getDistribution(): array
+    public function getDistribution(): ?PermissionModel
     {
         return $this->distribution;
     }
@@ -145,14 +160,42 @@ class LicenseModel
      */
     public function setDistribution(array $distribution): self
     {
-        $this->distribution = $distribution;
+        $this->distribution = PermissionModelBuilder::buildFromArray([
+            'condition'   => $distribution['condition'] ?? Conditions::UNDEFINED,
+            'description' => $distribution['description']
+                ?? Constants::MAP_DISTRIBUTION_DESCRIPTION[$distribution['condition'] ?? '']
+                ?? ''
+        ]);
         return $this;
     }
 
     /**
-     * @return string[]
+     * @return PermissionModel|null
      */
-    public function getPrivateUse(): array
+    public function getPatentUse(): ?PermissionModel
+    {
+        return $this->patentUse;
+    }
+
+    /**
+     * @param  string[] $patentUse
+     * @return self
+     */
+    public function setPatentUse(array $patentUse): self
+    {
+        $this->patentUse = PermissionModelBuilder::buildFromArray([
+            'condition'   => $patentUse['condition'] ?? Conditions::UNDEFINED,
+            'description' => $patentUse['description']
+                ?? Constants::MAP_PATENT_USE_DESCRIPTION[$patentUse['condition'] ?? '']
+                ?? ''
+        ]);
+        return $this;
+    }
+
+    /**
+     * @return PermissionModel|null
+     */
+    public function getPrivateUse(): ?PermissionModel
     {
         return $this->privateUse;
     }
@@ -163,14 +206,19 @@ class LicenseModel
      */
     public function setPrivateUse(array $privateUse): self
     {
-        $this->privateUse = $privateUse;
+        $this->privateUse = PermissionModelBuilder::buildFromArray([
+            'condition'   => $privateUse['condition'] ?? Conditions::UNDEFINED,
+            'description' => $privateUse['description']
+                ?? Constants::MAP_PRIVATE_USE_DESCRIPTION[$privateUse['condition'] ?? '']
+                ?? ''
+        ]);
         return $this;
     }
 
     /**
-     * @return string[]
+     * @return PermissionModel|null
      */
-    public function getLiability(): array
+    public function getLiability(): ?PermissionModel
     {
         return $this->liability;
     }
@@ -181,14 +229,19 @@ class LicenseModel
      */
     public function setLiability(array $liability): self
     {
-        $this->liability = $liability;
+        $this->liability = PermissionModelBuilder::buildFromArray([
+            'condition'   => $liability['condition'] ?? Conditions::UNDEFINED,
+            'description' => $liability['description']
+                ?? Constants::MAP_LIABILITY_DESCRIPTION[$liability['condition'] ?? '']
+                ?? ''
+        ]);
         return $this;
     }
 
     /**
-     * @return string[]
+     * @return PermissionModel|null
      */
-    public function getWarranty(): array
+    public function getWarranty(): ?PermissionModel
     {
         return $this->warranty;
     }
@@ -199,7 +252,12 @@ class LicenseModel
      */
     public function setWarranty(array $warranty): self
     {
-        $this->warranty = $warranty;
+        $this->warranty = PermissionModelBuilder::buildFromArray([
+            'condition'   => $warranty['condition'] ?? Conditions::UNDEFINED,
+            'description' => $warranty['description']
+                ?? Constants::MAP_WARRANTY_DESCRIPTION[$warranty['condition'] ?? '']
+                ?? ''
+        ]);
         return $this;
     }
 
@@ -208,7 +266,7 @@ class LicenseModel
      */
     public function getConditions(): array
     {
-        return $this->commercialUse;
+        return $this->conditions;
     }
 
     /**

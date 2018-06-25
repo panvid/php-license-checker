@@ -15,6 +15,7 @@ try {
     Output::exception($exception);
 }
 
-foreach ($checker->getCollectedLicenses() as $license)
-var_dump($checker->getCollectedLicenses());
-print_r($checker->getCollectedProblems());
+foreach ($checker->getCollectedLicenses() as $lib => $license) {
+    echo $lib . ': ' . $license->getInternalName() . ' as ' . $license->getExternalName() . ' '
+        . $license->getCommercialUse()->isAllowed() . PHP_EOL;
+}

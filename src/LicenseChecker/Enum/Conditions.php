@@ -11,4 +11,6 @@ namespace LicenseChecker\Enum;
 abstract class Conditions
 {
     public const UNDEFINED = 'undefined';
+    public const YES = 'yes';
+    public const NO = 'no';
 }

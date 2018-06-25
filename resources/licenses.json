@@ -1,2 +1,482 @@
 {
+  "AFL-3.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "AGPL-3.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "network-use-disclose",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "Apache-2.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "ARTISTIC-2.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "BSD-2-Clause": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "BSD-3-Clause-Clear": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": false},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "BSD-3-Clause": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "BSL-1.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "CC-By-4.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": false},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "CC-By-Sa-4.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": false},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "CC0-1.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": false},
+    "privateUse": {"condition": true},
+    "conditions": [
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "ECL-2.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "EPL-1.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "EPL-2.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "EUPL-1.1": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "network-use-disclose",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "EUPL-1.2": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "network-use-disclose",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "GPL-2.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "GPL-3.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "ISC": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "LGPL-2.1": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "LGPL-3.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "LPPL-1.3c": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "MIT": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "MPL-2.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "disclose-source",
+      "include-copyright",
+      "same-license"
+    ],
+    "limitations": [
+      "liability",
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "MS-RL": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "trademark-use",
+      "warranty"
+    ]
+  },
+  "NCSA": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "OFL-1.1": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "same-license"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "POSTGRESQL": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "UNLICENSE": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "UPL-1.0": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "patentUse": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  },
+  "WTFPL": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+    ],
+    "limitations": [
+    ]
+  },
+  "ZLIB": {
+    "commercial": {"condition": true},
+    "distribution": {"condition": true},
+    "modification": {"condition": true},
+    "privateUse": {"condition": true},
+    "conditions": [
+      "include-copyright",
+      "document-changes"
+    ],
+    "limitations": [
+      "liability",
+      "warranty"
+    ]
+  }
 }

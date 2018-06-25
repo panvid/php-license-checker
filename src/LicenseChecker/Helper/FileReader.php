@@ -6,11 +6,9 @@ namespace LicenseChecker\Helper;
 use LicenseChecker\Exception\FileNotFoundException;
 
 /**
- * @package   LicenseChecker\Helper
- * @author    david.pauli
- * @since     20.06.2018
- * @link      https://stash.check24.de/projects/CTS/repos/
- * @copyright Copyright (c) 2018 CHECK24 Vergleichsportal Reise GmbH
+ * @package LicenseChecker\Helper
+ * @author  david.pauli
+ * @since   20.06.2018
  */
 class FileReader
 {
