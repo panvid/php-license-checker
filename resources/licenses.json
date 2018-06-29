@@ -1,10 +1,10 @@
 {
   "AFL-3.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "document-changes"
@@ -16,11 +16,11 @@
     ]
   },
   "AGPL-3.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -34,11 +34,11 @@
     ]
   },
   "Apache-2.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "document-changes"
@@ -47,14 +47,18 @@
       "liability",
       "trademark-use",
       "warranty"
+    ],
+    "externalNames" : [
+      "Apache-2.0",
+      "Apache2"
     ]
   },
   "ARTISTIC-2.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "document-changes"
@@ -66,24 +70,27 @@
     ]
   },
   "BSD-2-Clause": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
     "limitations": [
       "liability",
       "warranty"
+    ],
+    "externalNames" : [
+      "BSD-3-Clause"
     ]
   },
   "BSD-3-Clause-Clear": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": false},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": false,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -93,10 +100,10 @@
     ]
   },
   "BSD-3-Clause": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -106,10 +113,10 @@
     ]
   },
   "BSL-1.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -119,11 +126,11 @@
     ]
   },
   "CC-By-4.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": false},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": false,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "document-changes"
@@ -135,11 +142,11 @@
     ]
   },
   "CC-By-Sa-4.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": false},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": false,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "same-license",
@@ -152,11 +159,11 @@
     ]
   },
   "CC0-1.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": false},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": false,
+    "privateUse": true,
     "conditions": [
     ],
     "limitations": [
@@ -166,11 +173,11 @@
     ]
   },
   "ECL-2.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "document-changes"
@@ -182,11 +189,11 @@
     ]
   },
   "EPL-1.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -198,11 +205,11 @@
     ]
   },
   "EPL-2.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -214,11 +221,11 @@
     ]
   },
   "EUPL-1.1": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -233,11 +240,11 @@
     ]
   },
   "EUPL-1.2": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -252,10 +259,10 @@
     ]
   },
   "GPL-2.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -265,14 +272,17 @@
     "limitations": [
       "liability",
       "warranty"
+    ],
+    "externalNames" : [
+      "GPL-2.0-only"
     ]
   },
   "GPL-3.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -282,13 +292,16 @@
     "limitations": [
       "liability",
       "warranty"
+    ],
+    "externalNames" : [
+      "GPL-3.0"
     ]
   },
   "ISC": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -298,10 +311,10 @@
     ]
   },
   "LGPL-2.1": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -311,14 +324,18 @@
     "limitations": [
       "liability",
       "warranty"
+    ],
+    "externalNames" : [
+      "LGPL-2.1",
+      "LGPL-2.1-or-later"
     ]
   },
   "LGPL-3.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -328,13 +345,16 @@
     "limitations": [
       "liability",
       "warranty"
+    ],
+    "externalNames" : [
+      "LGPL-3"
     ]
   },
   "LPPL-1.3c": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -346,24 +366,27 @@
     ]
   },
   "MIT": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
     "limitations": [
       "liability",
       "warranty"
+    ],
+    "externalNames" : [
+      "MIT"
     ]
   },
   "MPL-2.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "disclose-source",
       "include-copyright",
@@ -376,11 +399,11 @@
     ]
   },
   "MS-RL": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -390,10 +413,10 @@
     ]
   },
   "NCSA": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -417,10 +440,10 @@
     ]
   },
   "POSTGRESQL": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -430,10 +453,10 @@
     ]
   },
   "UNLICENSE": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
     ],
     "limitations": [
@@ -442,11 +465,11 @@
     ]
   },
   "UPL-1.0": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "patentUse": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "patentUse": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright"
     ],
@@ -456,20 +479,20 @@
     ]
   },
   "WTFPL": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
     ],
     "limitations": [
     ]
   },
   "ZLIB": {
-    "commercial": {"condition": true},
-    "distribution": {"condition": true},
-    "modification": {"condition": true},
-    "privateUse": {"condition": true},
+    "commercial": true,
+    "distribution": true,
+    "modification": true,
+    "privateUse": true,
     "conditions": [
       "include-copyright",
       "document-changes"

@@ -8,8 +8,8 @@ use RuntimeException;
 /**
  * @package LicenseChecker\Exception
  * @author  david.pauli
- * @since   20.06.2018
+ * @since   29.06.2018
  */
-class ConnectionException extends RuntimeException
+class UnknownLicenceException extends RuntimeException
 {
 }

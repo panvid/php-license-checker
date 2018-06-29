@@ -11,8 +11,7 @@ namespace LicenseChecker\Builder;
 interface BuilderInterface
 {
     /**
-     * @param  string[] $parameter
      * @return mixed
      */
-    public static function buildFromArray(array $parameter);
+    public function build();
 }

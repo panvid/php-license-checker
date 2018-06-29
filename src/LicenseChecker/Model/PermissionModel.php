@@ -12,26 +12,8 @@ use LicenseChecker\Enum\Conditions;
  */
 class PermissionModel
 {
-    private $condition = Conditions::UNDEFINED;
+    private $allowed = Conditions::UNDEFINED;
     private $description = '';
-
-    /**
-     * @return string
-     */
-    public function getCondition(): string
-    {
-        return $this->condition;
-    }
-
-    /**
-     * @param  string $condition
-     * @return self
-     */
-    public function setCondition(string $condition): self
-    {
-        $this->condition = $condition;
-        return $this;
-    }
 
     /**
      * @return string
@@ -56,6 +38,32 @@ class PermissionModel
      */
     public function isAllowed(): bool
     {
-        return $this->condition === Conditions::YES;
+        return $this->allowed === Conditions::YES;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAllowed(): string
+    {
+        return $this->allowed;
+    }
+
+    /**
+     * @return PermissionModel
+     */
+    public function allow(): self
+    {
+        $this->allowed = Conditions::YES;
+        return $this;
+    }
+
+    /**
+     * @return PermissionModel
+     */
+    public function disallow(): self
+    {
+        $this->allowed = Conditions::NO;
+        return $this;
     }
 }

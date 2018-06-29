@@ -6,8 +6,10 @@ namespace LicenseChecker;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use LicenseChecker\Builder\LicenseModelBuilder;
+use LicenseChecker\Exception\ClassNotFoundException;
 use LicenseChecker\Exception\ConnectionException;
 use LicenseChecker\Exception\FileNotFoundException;
+use LicenseChecker\Exception\UnknownLicenceException;
 use LicenseChecker\Exception\WrongFileTypeException;
 use LicenseChecker\Helper\Arguments;
 use LicenseChecker\Helper\FileReader;
@@ -23,16 +25,12 @@ class LicenseChecker
 {
     private const MESSAGE_RESPONSE_WRONG = 'The response to "%s" for lib "%s" version "%s" is not correct: "%s".';
     private const MESSAGE_STATUS_MESSAGE_WRONG = 'The request against "%s" response with "%d".';
-    private const MESSAGE_UNKNOWN_LICENSE = 'The license "%s" is not known (yet).';
 
     /** @var FileReader */
     private $fileReader;
 
     /** @var Client */
     private $client;
-
-    /** @var string[] */
-    private $collectedProblems = [];
 
     /** @var LicenseModel[] */
     private $collectedLicenses = [];
@@ -47,6 +45,8 @@ class LicenseChecker
     }
 
     /**
+     * @throws UnknownLicenceException
+     * @throws ClassNotFoundException
      * @throws ConnectionException
      * @throws WrongFileTypeException
      * @throws FileNotFoundException
@@ -77,32 +77,19 @@ class LicenseChecker
                         $response->getBody()->getContents()
                     ));
                 }
-                foreach ($licenses as $license) {
-                    $mappedName = Constants::LICENSE_MAPPING[$license] ?? null;
-                    if ($mappedName === null) {
-                        $this->collectedProblems[$libName] = sprintf(self::MESSAGE_UNKNOWN_LICENSE, $license);
-                    } else {
-                        $this->collectedLicenses[$libName] = LicenseModelBuilder::buildFromArray([
-                            Constants::KEY_EXTERNAL_NAME => $license,
-                            Constants::KEY_INTERNAL_NAME => Constants::LICENSE_MAPPING[$license]
-                        ]);
-                    }
+                foreach ($licenses as $externalName) {
+                    $this->collectedLicenses[$libName] = (new LicenseModelBuilder)
+                        ->externalName($externalName)
+                        ->build();
                 }
             } else {
-                $this->collectedProblems[$libName] = sprintf(
+                throw new ConnectionException(sprintf(
                     self::MESSAGE_STATUS_MESSAGE_WRONG,
                     $requestPath,
                     $response->getStatusCode()
-                );
+                ));
             }
         }
-    }
-    /**
-     * @return string[]
-     */
-    public function getCollectedProblems(): array
-    {
-        return $this->collectedProblems;
     }
 
     /**

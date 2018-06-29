@@ -5,7 +5,7 @@ namespace LicenseChecker\Model;
 
 use LicenseChecker\Builder\PermissionModelBuilder;
 use LicenseChecker\Constants;
-use LicenseChecker\Enum\Conditions;
+use LicenseChecker\Exception\ClassNotFoundException;
 
 /**
  * @author david.pauli
@@ -39,12 +39,6 @@ class LicenseModel
 
     /** @var PermissionModel */
     private $liability;
-
-    /** @var PermissionModel */
-    private $warranty;
-
-    /** @var string[] */
-    private $conditions = [];
 
     /**
      * @return string|null
@@ -109,17 +103,17 @@ class LicenseModel
     }
 
     /**
-     * @param  string[] $commercialUse
+     * @param  bool|null $allowed
      * @return self
+     * @throws ClassNotFoundException
      */
-    public function setCommercialUse(array $commercialUse): self
+    public function setCommercialUse(?bool $allowed): self
     {
-        $this->commercialUse = PermissionModelBuilder::buildFromArray([
-            'condition'   => $commercialUse['condition'] ?? Conditions::UNDEFINED,
-            'description' => $commercialUse['description']
-                ?? Constants::MAP_COMMERCIAL_USE_DESCRIPTION[$commercialUse['condition'] ?? '']
-                ?? ''
-        ]);
+        $builder = (new PermissionModelBuilder())->name(Constants::KEY_COMMERCIAL_USE);
+        if ($allowed !== null) {
+            $builder->allowed($allowed);
+        }
+        $this->commercialUse = $builder->build();
         return $this;
     }
 
@@ -132,17 +126,17 @@ class LicenseModel
     }
 
     /**
-     * @param  string[] $modification
+     * @param  bool|null $allowed
      * @return self
+     * @throws ClassNotFoundException
      */
-    public function setModification(array $modification): self
+    public function setModification(?bool $allowed): self
     {
-        $this->modification = PermissionModelBuilder::buildFromArray([
-            'condition'   => $modification['condition'] ?? Conditions::UNDEFINED,
-            'description' => $modification['description']
-                ?? Constants::MAP_MODIFICATION_DESCRIPTION[$modification['condition'] ?? '']
-                ?? ''
-        ]);
+        $builder = (new PermissionModelBuilder())->name(Constants::KEY_MODIFICATION);
+        if ($allowed !== null) {
+            $builder->allowed($allowed);
+        }
+        $this->modification = $builder->build();
         return $this;
     }
 
@@ -155,17 +149,17 @@ class LicenseModel
     }
 
     /**
-     * @param  string[] $distribution
+     * @param  bool|null $allowed
      * @return self
+     * @throws ClassNotFoundException
      */
-    public function setDistribution(array $distribution): self
+    public function setDistribution(?bool $allowed): self
     {
-        $this->distribution = PermissionModelBuilder::buildFromArray([
-            'condition'   => $distribution['condition'] ?? Conditions::UNDEFINED,
-            'description' => $distribution['description']
-                ?? Constants::MAP_DISTRIBUTION_DESCRIPTION[$distribution['condition'] ?? '']
-                ?? ''
-        ]);
+        $builder = (new PermissionModelBuilder())->name(Constants::KEY_DISTRIBUTION);
+        if ($allowed !== null) {
+            $builder->allowed($allowed);
+        }
+        $this->distribution = $builder->build();
         return $this;
     }
 
@@ -178,17 +172,17 @@ class LicenseModel
     }
 
     /**
-     * @param  string[] $patentUse
+     * @param  bool|null $allowed
      * @return self
+     * @throws ClassNotFoundException
      */
-    public function setPatentUse(array $patentUse): self
+    public function setPatentUse(?bool $allowed): self
     {
-        $this->patentUse = PermissionModelBuilder::buildFromArray([
-            'condition'   => $patentUse['condition'] ?? Conditions::UNDEFINED,
-            'description' => $patentUse['description']
-                ?? Constants::MAP_PATENT_USE_DESCRIPTION[$patentUse['condition'] ?? '']
-                ?? ''
-        ]);
+        $builder = (new PermissionModelBuilder())->name(Constants::KEY_PATENT_USE);
+        if ($allowed !== null) {
+            $builder->allowed($allowed);
+        }
+        $this->patentUse = $builder->build();
         return $this;
     }
 
@@ -201,17 +195,17 @@ class LicenseModel
     }
 
     /**
-     * @param  string[] $privateUse
+     * @param  bool|null $allowed
      * @return self
+     * @throws ClassNotFoundException
      */
-    public function setPrivateUse(array $privateUse): self
+    public function setPrivateUse(?bool $allowed): self
     {
-        $this->privateUse = PermissionModelBuilder::buildFromArray([
-            'condition'   => $privateUse['condition'] ?? Conditions::UNDEFINED,
-            'description' => $privateUse['description']
-                ?? Constants::MAP_PRIVATE_USE_DESCRIPTION[$privateUse['condition'] ?? '']
-                ?? ''
-        ]);
+        $builder = (new PermissionModelBuilder())->name(Constants::KEY_PRIVATE_USE);
+        if ($allowed !== null) {
+            $builder->allowed($allowed);
+        }
+        $this->privateUse = $builder->build();
         return $this;
     }
 
@@ -221,62 +215,6 @@ class LicenseModel
     public function getLiability(): ?PermissionModel
     {
         return $this->liability;
-    }
-
-    /**
-     * @param  string[] $liability
-     * @return self
-     */
-    public function setLiability(array $liability): self
-    {
-        $this->liability = PermissionModelBuilder::buildFromArray([
-            'condition'   => $liability['condition'] ?? Conditions::UNDEFINED,
-            'description' => $liability['description']
-                ?? Constants::MAP_LIABILITY_DESCRIPTION[$liability['condition'] ?? '']
-                ?? ''
-        ]);
-        return $this;
-    }
-
-    /**
-     * @return PermissionModel|null
-     */
-    public function getWarranty(): ?PermissionModel
-    {
-        return $this->warranty;
-    }
-
-    /**
-     * @param  string[] $warranty
-     * @return self
-     */
-    public function setWarranty(array $warranty): self
-    {
-        $this->warranty = PermissionModelBuilder::buildFromArray([
-            'condition'   => $warranty['condition'] ?? Conditions::UNDEFINED,
-            'description' => $warranty['description']
-                ?? Constants::MAP_WARRANTY_DESCRIPTION[$warranty['condition'] ?? '']
-                ?? ''
-        ]);
-        return $this;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getConditions(): array
-    {
-        return $this->conditions;
-    }
-
-    /**
-     * @param  string[] $conditions
-     * @return self
-     */
-    public function setConditions(array $conditions): self
-    {
-        $this->conditions = $conditions;
-        return $this;
     }
 
     /**
